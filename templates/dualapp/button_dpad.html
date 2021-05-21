@@ -109,126 +109,125 @@
 </div>
 <script>
 	// Torvalds eye and movement
-$('#forward').on('mousedown', function(){
+$('#forward').on('touchstart', function(){
 	$.get('/torvaldsLeft');
 	});
-$('#forward').on('mouseup', function(){
+$('#forward').on('touchend', function(){
 	$.get('/stop');
 	});
-$('#backward').on('mousedown', function(){
+$('#backward').on('touchstart, function(){
 	$.get('/torvaldsRight');
 	});
-$('#backward').on('mouseup', function(){
+$('#backward').on('touchend', function(){
 	$.get('/stop');
 	});
-$('#left').on('mousedown', function(){
+$('#left').on('touchstart', function(){
 	$.get('/torvaldsForward');
 	});
-$('#left').on('mouseup', function(){
+$('#left').on('touchend', function(){
 	$.get('/stop');
 	});
-$('#right').on('mousedown', function(){
+$('#right').on('touchstart', function(){
 	$.get('/torvaldsBackward');
 	});
-$('#right').on('mouseup', function(){
+$('#right').on('touchend', function(){
 	$.get('/stop');
 	});
-$('#torvalds').on('mousedown', function(){
+$('#torvalds').on('touchstart', function(){
 	$.get('/torvaldson');
 	});
-$('#torvalds').on('mouseup', function(){
+$('#torvalds').on('touchend', function(){
 	$.get('/torvaldsoff');
 	});
 	
 // Linus eye and movement
 
-$('#linus').on('mousedown', function(){
+$('#linus').on('touchstart', function(){
 	$.get('/eyeon');
 	});
-$('#linus').on('mouseup', function(){
+$('#linus').on('touchend', function(){
 	$.get('/eyeoff');
 	});
-$('#up').on('mousedown', function(){
+$('#up').on('touchstart', function(){
 	$.get('/directionone');
 	});
 $('#up').on('mouseup', function(){
 	$.get('/stoptwo');
 	});
-$('#down').on('mousedown', function(){
+$('#down').on('touchstart', function(){
 	$.get('/directiontwo');
 	});
-$('#down').on('mouseup', function(){
+$('#down').on('touchend', function(){
 	$.get('/stoptwo');
 	});
-$('#west').on('mousedown', function(){
+$('#west').on('touchstart', function(){
 	$.get('/directionfour');
 	});
-$('#west').on('mouseup', function(){
+$('#west').on('touchend', function(){
 	$.get('/stoptwo');
 	});
-$('#east').on('mousedown', function(){
+$('#east').on('touchstart', function(){
 	$.get('/directionthree');
 	});
-$('#east').on('mouseup', function(){
+$('#east').on('touchend', function(){
 	$.get('/stoptwo');
     });
 
 // Servo one
-$('#minus-90').on('mousedown', function(){
+$('#minus-90').on('touchstart', function(){
 	$.get('/minus90');
 	});
-$('#minus-45').on('mousedown', function(){
+$('#minus-45').on('touchstart', function(){
 	$.get('/minus45');
 	});
-$('#zero').on('mousedown', function(){
+$('#zero').on('touchstart', function(){
 	$.get('/zero');
 	});
-$('#positive-45').on('mousedown', function(){
+$('#positive-45').on('touchstart', function(){
 	$.get('/positive45');
 	});
-$('#positive-90').on('mousedown', function(){
+$('#positive-90').on('touchstart', function(){
 	$.get('/positive90');
 	});
 	
 // Servo two
 
-$('#minus-902').on('mousedown', function(){
+$('#minus-902').on('touchstart', function(){
 	$.get('/minus902');
 	});
-$('#minus-452').on('mousedown', function(){
+$('#minus-452').on('touchstart', function(){
 	$.get('/minus452');
 	});
-$('#zero2').on('mousedown', function(){
+$('#zero2').on('touchstart', function(){
 	$.get('/zero2');
 	});
-$('#positive-452').on('mousedown', function(){
+$('#positive-452').on('touchstart', function(){
 	$.get('/positive452');
 	});
-$('#positive-902').on('mousedown', function(){
+$('#positive-902').on('touchstart', function(){
 	$.get('/positive902');
 	});
 // PWM One
 
-$('#thirty').on('mousedown', function(){
+$('#thirty').on('touchstart', function(){
 	$.get('/pwmThirty');
 	});
-$('#fifty').on('mousedown', function(){
+$('#fifty').on('touchstart', function(){
 	$.get('/pwmFifty');
 	});
-$('#full').on('mousedown', function(){
+$('#full').on('touchstart', function(){
 	$.get('/pwmFull');
 	});
 // PWM two
-$('#thirty-2').on('mousedown', function(){
+$('#thirty-2').on('touchstart', function(){
 	$.get('/pwmThirty2');
 	});
-$('#fifty-2').on('mousedown', function(){
+$('#fifty-2').on('touchstart', function(){
 	$.get('/pwmFifty2');
 	});
-$('#full-2').on('mousedown', function(){
+$('#full-2').on('touchstart', function(){
 	$.get('/pwmFull2');
 	});
-
 
 
 
