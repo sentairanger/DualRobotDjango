@@ -71,4 +71,7 @@ The `dualrobottouch` file can be used to run the robots on either Android or iOS
 * App design on Windows
 ![windows](https://github.com/sentairanger/DualRobotDjango/blob/main/Django.PNG)
 
+* Torvalds and Linux
+![Robot](https://github.com/sentairanger/DualRobotDjango/blob/main/Figure4.png)
+
 
