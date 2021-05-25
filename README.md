@@ -64,3 +64,9 @@ Follow the exact same steps as indicated on the software section.
 The `dualrobottouch` file can be used to run the robots on either Android or iOS. However, Pythonista or Pydroid3 can be used to run the code on the phone or tablet directly. This prevents having to use another desktop to run the code. 
 
 ## Pictures
+
+* App design on Ubuntu 
+![Linux](https://github.com/sentairanger/DualRobotDjango/blob/main/linux.png)
+
+* App design on Windows
+![windows](https://github.com/sentairanger/DualRobotDjango/blob/main/Django.PNG)
