@@ -1,0 +1,10 @@
+apiVersion: v1
+name: django-dualrobot
+description: Run the django robot app
+keywords:
+- django
+- dualrobot
+version: 1.0.0
+maintainers:
+- name: Edgardo 
+  email: ed2point0@gmail.com
