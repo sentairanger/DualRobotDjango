@@ -75,3 +75,17 @@ The `dualrobottouch` file can be used to run the robots on either Android or iOS
 ![Robot](https://github.com/sentairanger/DualRobotDjango/blob/main/Figure4.png)
 
 
+## Deploying the app using a Docker Container
+
+If you want to run this in a Docker container first install Docker using this ![link](https://docs.docker.com/get-docker/). Once you do then you can use the `Dockerfile` provided to build the container. Use the command `docker built -t django-dualrobot .` to build the container. To see if you created it use the command `docker images` to test if it works run the command `docker run -d -p 8000:8000`. Then to stop the container run `docker stop container-id`. Make sure to go to `localhost:8000` to see if the app works. To tag it you can run `docker tag django-dualrobot linuxrobotgeek/django-dualrobot:tag-version`. If you want to push it be sure to have a docker account and then log in with `docker login`. To avoid any security issues type `docker logout` once you're done. To push the docker image, run `docker push linuxrobotgeek/django-dualrobot:tag-version`. 
+
+## Deploying the app with Kubernetes
+
+To deploy this app with Kubernetes you can either run it locally with kind, (use this ![link](https://kind.sigs.k8s.io/docs/user/quick-start/) for the instructions) or with k3s (use this ![link](https://k3s.io/) for the installation process) on th `Vagrantfile` I have provided. If you are going to use the `Vagrantfile` be sure to have VirtualBox installed. Also to avoid any issue with running your pod on the VM, be sure to run `zypper install -t pattern apparmor` since Vagrant does have issues. Also make sure to run `sudo su` before running that command since you'll need to be super user to run that command and also run your pods. To create a deploy run `kubectl create deploy django-dualrobot --image=linuxrobotgeek/django-dualrobot:tag-version` and check to see if it works with `kubectl get deploy`. Once it's ready you can run the app locally or on the VM with `kubectl port-forward po/django-dualrobot-tag-id 8000:8000`. Add `--address 0.0.0.0` if running on Vagrant. Then check `localhost:8000` or `192.168.50.4:8000` if using the Vagrant box to run the app. 
+
+## Deploying the app on ArgoCD
+
+To deploy this on ArgoCD it's better to run this on the Vagrant box. Follow the instructions ![here](https://argoproj.github.io/argo-cd/getting_started/). Once you are ready you can use the `argocd-dualrobot.yaml` for example to run the app. To deploy run `kubectl apply -f argocd-dual-robot.yaml`. Then go to the address `192.168.50.4:30007` to access ArgoCD. Ignore any warnings and you should be good to go. Then sync the app and then the pod should be running. To run the pod run the same `kubectl port-forward` command as described in the Kubernetes section and it should run in port 8000. Go to the address `192.168.50.4:8000` and now the app should run.
+
+* App being deployed in ArgoCD
+![ArgoCD](https://github.com/sentairanger/DualRobotDjango/blob/main/Screenshot%20from%202021-06-21%2014-20-51.png)
